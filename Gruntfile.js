@@ -13,7 +13,9 @@ module.exports = function(grunt) {
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
             ' *\n' +
-            ' * https://github.com/1000hz/bootstrap-validator\n' +
+            ' * https://github.com/1000hz/bootstrap-validator\n\n' +
+			' * Changed by Ne0x\n' +
+			' * https://github.com/Ne0x/bootstrap-validator\n' +
             ' */\n\n',
 
     // Task configuration.

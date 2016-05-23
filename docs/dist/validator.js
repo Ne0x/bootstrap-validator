@@ -4,6 +4,9 @@
  * Licensed under http://opensource.org/licenses/MIT
  *
  * https://github.com/1000hz/bootstrap-validator
+
+ * Changed by Ne0x
+ * https://github.com/Ne0x/bootstrap-validator
  */
 
 +function ($) {
@@ -52,13 +55,12 @@
 
   Validator.INPUT_SELECTOR = ':input:not([type="submit"], button):enabled:visible'
 
-  Validator.FOCUS_OFFSET = 20
-
   Validator.DEFAULTS = {
     delay: 500,
     html: false,
     disable: true,
     focus: true,
+	focusOffset: 20,
     custom: {},
     errors: {
       match: 'Does not match',
@@ -189,7 +191,7 @@
     var $input = $(".has-error:first :input")
     if ($input.length === 0) return
 
-    $(document.body).animate({scrollTop: $input.offset().top - Validator.FOCUS_OFFSET}, 250)
+    $(document.body).animate({scrollTop: $input.offset().top - this.options.focusOffset}, 250)
     $input.focus()
   }
 
